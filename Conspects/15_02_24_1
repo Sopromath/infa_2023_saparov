@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int f(int *x_ptr){
+    cout<<"Called f(x) and x ="<<*x_ptr<<"\n";
+    (*x_ptr)+=5;
+    cout<<"now x ="<<*x_ptr<<"\n";
+    return *x_ptr;
+}
+
+
+int main()
+{
+    int a = 8;
+    int *ptr = &a;
+    f(ptr);
+    cout<<a<<endl;
+    float *ghy = reinterpret_cast<float*>(&a);//очень опасная вещь:))   
+    
+    double x = 1.23;
+    double *p = &x;
+    
+    //cout<<a<<"\t"<<ptr<<"\t"<<++(*ptr)<<"\n";
+    //cout<<sizeof(a)<<"\t"<<sizeof(x)<<"\n";
+    //cout<<sizeof(ptr)<<"\t"<<sizeof(p)<<"\n";
+    
+    cout<<ptr<<"\t"<<ghy<<"\n";
+    cout<<*ptr<<"\t"<<*ghy<<"\n";
+    
+    return 0;
+}
