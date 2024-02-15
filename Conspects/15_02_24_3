@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+
+int find_elements(int* array, int n, int element){
+    for(int i = 0; i<n; i++){
+        if(array[i] == element){
+            return i;
+        }
+    }
+    return -1;
+}
+
+void deleteElement(int* array, int n, int el_del){
+    if(el_del >= n){
+        exit(1);
+    }
+    for(int i = el_del; i<n-1; i++){
+        array[i] = array[i+1]
+    }
+}
+
+void insectElement(int* array, int n, int el_ins, int znach_el){
+    for(int i = n-1; i>= el_ins; i--){
+        array[i+1] = array[i];
+    }
+}
+
+int main()
+{
+    int n = 5;
+    int arr[n] = {1, 2, 3, 4};
+    
+    for(int i = 0; i < n; i++){
+        cout<<arr[i]<<"\t";
+    }
+    
+    deleteElement(arr, n, )
+
+    
+    return 0;
+}
