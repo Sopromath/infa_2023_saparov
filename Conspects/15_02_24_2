@@ -1,0 +1,17 @@
+#include <iostream>
+
+
+using namespace std;
+
+
+int main()
+{
+    int a = 12345;
+    char *c = reinterpret_cast<char*>(&a);
+    for(int i = 0; i < sizeof(a); i++){
+        cout<<static_cast<int>(*(c+i))<<"\t";
+    }
+
+    
+    return 0;
+}
