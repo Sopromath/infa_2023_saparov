@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+    Type *prt  = new Type[n];
+    delete[] ptr;
+    delete[] nullptr;
+    return 0;
+}
